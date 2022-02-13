@@ -1,12 +1,28 @@
-import {Component} from "react";
+import MyComponent from "./MyComponent";
 import {render} from "react-dom";
 
-import MySection from "./MySection";
-import MyButton from "./MyButton";
 
-render(
-    <MySection>
-        <MyButton>My Button Text</MyButton>
-    </MySection>,
-    document.getElementById('root')
-);
+const myComponent = render(<MyComponent/>, document.getElementById('root'));
+
+setTimeout(() => {
+    myComponent.setState({ first: 'done!'})
+}, 1000);
+
+setTimeout(() => {
+    myComponent.setState({ second: 'done!' })
+}, 2000);
+
+setTimeout(() => {
+    myComponent.setState({ third: 'done!' })
+}, 3000);
+
+setTimeout(() => {
+    myComponent.setState({ fourth: 'done!' })
+}, 4000);
+
+setTimeout(() => {
+    myComponent.setState(state => ({
+        ...state,
+        fourth: state.doneMessage
+    }));
+}, 4000)
