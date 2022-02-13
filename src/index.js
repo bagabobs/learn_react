@@ -1,12 +1,12 @@
-import {Component} from "react";
 import {render} from "react-dom";
 
-import MySection from "./MySection";
-import MyButton from "./MyButton";
+import WithFragments from "./WithFragments";
+import WithOutFragments from "./WithOutFragments";
 
 render(
-    <MySection>
-        <MyButton>My Button Text</MyButton>
-    </MySection>,
+    <section>
+        <WithOutFragments/>
+        <WithFragments/>
+    </section>,
     document.getElementById('root')
 );
