@@ -2,10 +2,7 @@ import {Component} from "react";
 
 export default class MyButton extends Component {
     render() {
-        return (
-            <button>
-                {this.props.children}
-            </button>
-        );
+        const { disabled, text } = this.props;
+        return <button disabled={disabled}>{text}</button>
     }
 }
