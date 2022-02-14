@@ -2,4 +2,11 @@ import MyComponent from "./MyComponent";
 import {render} from "react-dom";
 
 
-render(<MyComponent/>, document.getElementById('root'));
+const myComponent = render(<MyComponent/>, document.getElementById('root'));
+
+setTimeout(() => {
+    myComponent.setState({
+        heading: 'React Awesome',
+        content: 'Done!'
+    });
+}, 3000);
