@@ -1,8 +1,5 @@
-import {Component} from "react";
+import React from "react";
 
-export default class MyButton extends Component {
-    render() {
-        const { disabled, text } = this.props;
-        return <button disabled={disabled}>{text}</button>
-    }
-}
+export default ({ disabled, text }) => (
+    <button disabled={disabled}>{text}</button>
+);
