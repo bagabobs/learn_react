@@ -1,11 +1,12 @@
-import './App.css';
+import {Fragment} from "react";
+import First from "./First";
+import Second from "./Second";
+import Third from "./Third";
 
-function App() {
-  return (
-      <div>
-        Hello World
-      </div>
-  );
-}
-
-export default App;
+export default () => (
+    <Fragment>
+        <First />
+        <Second />
+        <Third />
+    </Fragment>
+);
