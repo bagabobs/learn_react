@@ -1,12 +1,5 @@
+import MyComponent from "./MyComponent";
 import {render} from "react-dom";
 
-import WithFragments from "./WithFragments";
-import WithOutFragments from "./WithOutFragments";
 
-render(
-    <section>
-        <WithOutFragments/>
-        <WithFragments/>
-    </section>,
-    document.getElementById('root')
-);
+render(<MyComponent/>, document.getElementById('root'));
