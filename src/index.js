@@ -6,7 +6,7 @@ function render({ first, second }) {
     renderJSX(
         <main>
             <MyButton text={first.text} disabled={first.disabled}/>
-            <MyButton text={second.text} disabled={second.disabled}/>
+            <MyButton />
         </main>,
         document.getElementById('root')
     );

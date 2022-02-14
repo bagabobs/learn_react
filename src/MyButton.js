@@ -1,5 +1,12 @@
 import React from "react";
 
-export default ({ disabled, text }) => (
+const MyButton = ({ disabled, text }) => (
     <button disabled={disabled}>{text}</button>
 );
+
+MyButton.defaultProps = {
+    text: 'My Button, biar berubah',
+    disabled: true
+};
+
+export default MyButton;
