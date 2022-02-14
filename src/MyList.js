@@ -1,15 +1,10 @@
-import {Component} from "react";
+import React from "react";
 
-export default class MyList extends Component {
-    render() {
-        const { items } = this.props;
-
-        return (
-            <ul>
-                {items.map(i => (
-                    <li key={i}>{i}</li>
-                ))}
-            </ul>
-        );
-    }
-}
+// eslint-disable-next-line import/no-anonymous-default-export
+export default ({ items }) => (
+    <ul>
+        {items.map(i => (
+            <li key={i}>{i}</li>
+        ))}
+    </ul>
+);
