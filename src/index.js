@@ -1,12 +1,7 @@
 import {render} from "react-dom";
-
-import WithFragments from "./WithFragments";
-import WithOutFragments from "./WithOutFragments";
+import App from "./App";
 
 render(
-    <section>
-        <WithOutFragments/>
-        <WithFragments/>
-    </section>,
+    <App />,
     document.getElementById('root')
 );
