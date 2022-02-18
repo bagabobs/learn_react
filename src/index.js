@@ -8,7 +8,7 @@ const size = 50;
 
 render(
     <section>
-        <button disbled={!enabled}>{text}</button>
+        <button disabled={!enabled}>{text}</button>
         <input placeholder={placeholder} size={size}/>
     </section>,
     document.getElementById('root')
