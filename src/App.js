@@ -1,17 +1,29 @@
 import {Fragment, useEffect, useState} from "react";
-import User from "./User";
+import { Page1, Page2, Page3 } from './Page';
+import {UserProvider} from "./UserProvider";
 
-const ShowHideUser = ({ show }) => ( show ? <User /> : null );
+function ChoosePage( { page } ) {
+    const Page = [ Page1, Page2, Page3 ][page];
+    return <Page/>
+}
 
-export default function App() {
-    const [ show, setShow ] = useState(false);
+function App() {
+    const [ page, setPage ] = useState(0);
 
     return (
-        <Fragment>
-            <button onClick={() => setShow(!show)}>
-                {show ? 'Hide User' : 'Show User'}
+        <UserProvider>
+            <button onClick={ () => setPage(0) } disabled={ page === 0}>
+                Page 1
             </button>
-            <ShowHideUser show={show}/>
-        </Fragment>
+            <button onClick={ () => setPage(1) } disabled={ page === 1}>
+                Page 2
+            </button>
+            <button onClick={ () => setPage(2) } disabled={ page === 2}>
+                Page 3
+            </button>
+            <ChoosePage page={ page } />
+        </UserProvider>
     );
 }
+
+export default App;
