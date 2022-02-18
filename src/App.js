@@ -1,19 +1,17 @@
-import {Fragment, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
+import User from "./User";
+
+const ShowHideUser = ({ show }) => ( show ? <User /> : null );
 
 export default function App() {
-    const [name, setName] = useState('Adam');
-    const [age, setAge] = useState(35);
+    const [ show, setShow ] = useState(false);
 
     return (
         <Fragment>
-            <section>
-                <input value={name} onChange={e => setName(e.target.value)} />
-                <p>My Name is {name}</p>
-            </section>
-            <section>
-                <input value={age} onChange={e => setAge(e.target.value)} />
-                <p>My Age is {age}</p>
-            </section>
+            <button onClick={() => setShow(!show)}>
+                {show ? 'Hide User' : 'Show User'}
+            </button>
+            <ShowHideUser show={show}/>
         </Fragment>
     );
 }
