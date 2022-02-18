@@ -3,10 +3,9 @@ import {render} from "react-dom";
 
 import MySection from "./MySection";
 import MyButton from "./MyButton";
+import App from "./App";
 
 render(
-    <MySection>
-        <MyButton>My Button Text</MyButton>
-    </MySection>,
+    <App/>,
     document.getElementById('root')
 );
