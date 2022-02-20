@@ -1,9 +1,24 @@
 import {Component} from "react";
 
+function fetchData() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, 3000)
+    });
+}
+
 export default class MyButton extends Component {
+    onClick(e) {
+        console.log('clicked', e.currentTarget.style);
+
+        fetchData().then(() => {
+            console.log('callback', e.currentTarget.style);
+        })
+    }
     render() {
         return (
-            <button>
+            <button onClick={ this.onClick }>
                 {this.props.children}
             </button>
         );
