@@ -1,12 +1,4 @@
-import {Component} from "react";
 import {render} from "react-dom";
+import UserListContainer from "./UserListContainer";
 
-import MySection from "./MySection";
-import MyButton from "./MyButton";
-
-render(
-    <MySection>
-        <MyButton>My Button Text</MyButton>
-    </MySection>,
-    document.getElementById('root')
-);
+render(<UserListContainer />, document.getElementById('root'));
