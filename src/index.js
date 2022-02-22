@@ -1,12 +1,7 @@
-import {Component} from "react";
+import UserListContainer from "./UserListContainer";
 import {render} from "react-dom";
 
-import MySection from "./MySection";
-import MyButton from "./MyButton";
-
 render(
-    <MySection>
-        <MyButton>My Button Text</MyButton>
-    </MySection>,
+    <UserListContainer loading="playing the waiting game..."/>,
     document.getElementById('root')
 );
